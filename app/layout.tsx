@@ -5,6 +5,7 @@ import { Analytics } from '@vercel/analytics/react';
 import { Logo, SettingsIcon, UsersIcon, VercelLogo } from '@/components/icons';
 import { User } from './user';
 import { NavItem } from './nav-item';
+import { Eye, HomeIcon, Square, Wallet, Wrench } from 'lucide-react';
 
 export const metadata = {
   title: 'Next.js App Router + NextAuth + Tailwind CSS',
@@ -35,16 +36,32 @@ export default function RootLayout({
               <div className="flex-1 overflow-auto py-2">
                 <nav className="grid items-start px-4 text-sm font-medium">
                   <NavItem href="/">
+                    <HomeIcon className="h-4 w-4" />
+                    Dashboard
+                  </NavItem>
+                  <NavItem href="/users">
                     <UsersIcon className="h-4 w-4" />
                     Users
+                  </NavItem>
+                  <NavItem href="/properties">
+                    <Square className="h-4 w-4" />
+                    Property Management
+                  </NavItem>
+                  <NavItem href="/maintenance">
+                    <Wrench className="h-4 w-4" />
+                    Maintenance Management
+                  </NavItem>
+                  <NavItem href="/financial">
+                    <Wallet className="h-4 w-4" />
+                    Financial Management
+                  </NavItem>
+                  <NavItem href="/viewingrequests">
+                    <Eye className="h-4 w-4" />
+                    Viewing Requests Management
                   </NavItem>
                   <NavItem href="/settings">
                     <SettingsIcon className="h-4 w-4" />
                     Settings
-                  </NavItem>
-                  <NavItem href="https://vercel.com/templates/next.js/admin-dashboard-tailwind-postgres-react-nextjs">
-                    <VercelLogo className="h-4 w-4" />
-                    Deploy
                   </NavItem>
                 </nav>
               </div>
