@@ -6,11 +6,12 @@ import { Logo, SettingsIcon, UsersIcon, VercelLogo } from '@/components/icons';
 import { User } from './user';
 import { NavItem } from './nav-item';
 import { Eye, HomeIcon, Square, Wallet, Wrench } from 'lucide-react';
+import MabapiLogo from 'mabapi-logo.png'
 
 export const metadata = {
-  title: 'Next.js App Router + NextAuth + Tailwind CSS',
+  title: 'Mabapi Admin Dashboard',
   description:
-    'A user admin dashboard configured with Next.js, Postgres, NextAuth, Tailwind CSS, TypeScript, and Prettier.'
+    'Mabapi Admin Dashboard is a modern admin dashboard template that is built with Tailwind CSS and Next.js.'
 };
 
 export default function RootLayout({
@@ -25,12 +26,15 @@ export default function RootLayout({
           <div className="hidden border-r bg-gray-100/40 lg:block dark:bg-gray-800/40">
             <div className="flex h-full max-h-screen flex-col gap-2">
               <div className="flex h-[60px] items-center border-b px-5">
+
+
                 <Link
                   className="flex items-center gap-2 font-semibold"
                   href="/"
                 >
                   <Logo />
-                  <span className="">ACME</span>
+                  
+                  <span className="">Mabapi</span>
                 </Link>
               </div>
               <div className="flex-1 overflow-auto py-2">
@@ -45,19 +49,19 @@ export default function RootLayout({
                   </NavItem>
                   <NavItem href="/properties">
                     <Square className="h-4 w-4" />
-                    Property Management
+                    Properties
                   </NavItem>
                   <NavItem href="/maintenance">
                     <Wrench className="h-4 w-4" />
-                    Maintenance Management
+                    Maintenance
                   </NavItem>
                   <NavItem href="/financial">
                     <Wallet className="h-4 w-4" />
-                    Financial Management
+                    Payments
                   </NavItem>
                   <NavItem href="/viewingrequests">
                     <Eye className="h-4 w-4" />
-                    Viewing Requests Management
+                    View Requests
                   </NavItem>
                   <NavItem href="/settings">
                     <SettingsIcon className="h-4 w-4" />
